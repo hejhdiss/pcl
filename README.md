@@ -99,7 +99,7 @@ hello/
 
 ---
 
-## Example .pcl Block Syntax
+## [Example .pcl Block Syntax](hello.pcl)
 
 ```bash
 %c name=mathmod export=add,g_counter
@@ -159,6 +159,12 @@ print("Counter after increment:", g_counter.value)
 - **Single process:** Python runs in the same process that loads compiled C modules.
 - **Temporary directories:** Build and dist directories are created beside the `.pcl` file.
 - **No cross-compilation:** Assumes native build environment.
+
+### Tested Environment
+
+- **Operating System:** Xubuntu 24.04.2 LTS
+- **Virtualization Platform:** VMware Workstation 17
+- ****Notes:** The project has been tested and confirmed working in this environment. Compatibility with other Linux distributions or setups may vary.
 
 ---
 
