@@ -89,9 +89,9 @@ For a source file hello.pcl, you will get:
 hello/
 ├── build/
 │   ├── manifest.json
-│   ├── my_c_module.c
-│   ├── my_c_module.so
-│   ├── my_c_module_wrapper.py
+│   ├── mathmod.c
+│   ├── mathmod.so
+│   ├── mathmod_wrapper.py
 │   └── __pcl_main__.py
 ├── dist/
 │   └── hello_onefile.pyz  # if --onefile used
