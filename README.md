@@ -42,7 +42,8 @@ sudo apt install python3 gcc gpg
 
 ### Step 3: Install PCL
 
-Download the .deb file from [Releases](https://github.com/hejhdiss/pcl/releases)  and open the terminal in same directory as the .deb the xecute:
+Download the .deb file from [Releases](https://github.com/hejhdiss/pcl/releases) page.  
+Open a terminal in the same directory where the .deb file is located, then run:
 
 ```bash
 sudo dpkg -i pcl_1.0_all.deb
