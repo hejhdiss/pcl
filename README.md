@@ -1,6 +1,6 @@
 # PCL (Python-C Linked) Minimal Compiler/Runner
 
-`pcl.py` is a minimal proof-of-concept compiler and runner for PCL files, which combine embedded C and Python code into a single source file. It extracts, compiles C code into shared libraries, generates Python `ctypes` wrappers, and runs the combined Python code seamlessly.
+`pcl` is a minimal proof-of-concept compiler and runner for PCL files, which combine embedded C and Python code into a single source file. It extracts, compiles C code into shared libraries, generates Python `ctypes` wrappers, and runs the combined Python code seamlessly.
 
 ---
 
