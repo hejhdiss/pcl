@@ -164,7 +164,7 @@ print("Counter after increment:", g_counter.value)
 
 - **Operating System:** Xubuntu 24.04.2 LTS
 - **Virtualization Platform:** VMware Workstation 17
-- ****Notes:** The project has been tested and confirmed working in this environment. Compatibility with other Linux distributions or setups may vary.
+- **Notes:** The project has been tested and confirmed working in this environment. Compatibility with other Linux distributions or setups may vary.
 
 ---
 
