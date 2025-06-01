@@ -1,0 +1,59 @@
+name: pcl
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1 – Check out repository
+      - uses: actions/checkout@v4
+
+      # 2 – Set up Python
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+
+      # 3 – (Explicitly) make sure gcc tool-chain is available
+      #     ubuntu-latest already ships gcc, but installing build-essential
+      #     guarantees g++, make, etc. for native C builds.
+      - name: Install gcc / build-essential
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y build-essential
+
+      # 4 – Install Python dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      # 5 – Lint
+      - name: Lint with flake8
+        run: |
+          # Stop on critical errors (E9, F63, F7, F82)
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # Treat everything else as warnings
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+      # 6 – Run unit tests
+      - name: Test with pytest
+        run: |
+          pytest -q
+
+      # 7 – Run the main PCL script (only if tests passed)
+      - name: Run PCL main script
+        run: |
+          python pcl.py
+          
+
