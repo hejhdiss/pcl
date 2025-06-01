@@ -92,7 +92,6 @@ def compile_c_modules(build_dir: Path, manifest):
         c_path  = blk["path"]
         so_path = build_dir / f"{name}.so"
 
-        # NOTE: do **not** hide symbols unless the user explicitly asks for it.
         extra_visibility_flags = []
         if blk["meta"].get("hide", "no").lower() == "yes":
             extra_visibility_flags.append("-fvisibility=hidden")
@@ -115,7 +114,6 @@ def compile_c_modules(build_dir: Path, manifest):
 
 import ctypes
 
-# ... your existing imports and code ...
 
 def gen_ctypes_wrapper(build_dir: Path, blk, so_path: Path):
     name = blk["meta"].get("name")
@@ -152,8 +150,7 @@ def bytes_to_ptr(data):
         ""
     ]
 
-    # We'll attempt simple detection of global variables and structs/enums by naming conventions or exports.
-    # For this POC, assume user explicitly exports globals and callback function types via 'export' metadata.
+  
 
     # Exported functions, variables, structs/enums
     for sym in exports:
@@ -165,8 +162,8 @@ def bytes_to_ptr(data):
             continue
 
         # For global variables, user names them as "g_<name>" or marks them explicitly in meta.
-        # Try to detect global variables with 'global_vars' key (optional).
-        # We'll wrap them with .in_dll(lib, 'symbol')
+   
+       
 
         # For this minimal POC, assume anything starting with 'g_' is a global variable of type int.
         if sym.startswith("g_"):
