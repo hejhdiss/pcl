@@ -50,6 +50,6 @@ jobs:
       # 6 – Run the main PCL script (only if tests passed)
       - name: Run PCL main script
         run: |
-          python pcl.py hello.pcl
+          python3 pcl.py hello.pcl
           
 
