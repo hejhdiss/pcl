@@ -14,6 +14,35 @@
 
 ---
 
+##  Online Playground
+
+You can try out PCL directly in your browser using the **PCL Playground**:
+
+[https://hejhdiss.github.io/pcl-playground/](https://hejhdiss.github.io/pcl-playground/)
+
+The playground allows you to write `.pcl` files (which combine Python and C code), execute them remotely, and instantly see the results — no installation required.
+
+### How It Works
+
+- When you click **Run**, your `.pcl` code is sent to a remote backend.
+- The backend:
+  - Creates a **temporary `.pcl` file and project folder** on the server.
+  - Extracts the C and Python code blocks.
+  - Compiles the C part using `gcc`.
+  - Generates `ctypes` wrappers and links everything.
+  - Runs the resulting Python code and sends the output back.
+
+### Use Case: 🔬 Experiments
+
+The playground is great for:
+
+- Quickly experimenting with Python–C integration.
+- Prototyping and testing `.pcl` code without setting up a local toolchain.
+
+> ⚠️ **Note:** Code is stored and processed temporarily on the backend. Do not use the playground for storing important data or sensitive code.
+
+---
+
 ## Installation on Linux (.deb based distros)
 
 ### Step 1: Import the public key
