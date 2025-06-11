@@ -32,7 +32,7 @@ The playground allows you to write `.pcl` files (which combine Python and C code
   - Generates `ctypes` wrappers and links everything.
   - Runs the resulting Python code and sends the output back.
 
-### Use Case: 🔬 Experiments
+### Use Case: Experiments
 
 The playground is great for:
 
