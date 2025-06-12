@@ -250,7 +250,6 @@ Please reach out via email (**hejhdiss@gmail.com**), submit pull requests on the
 For questions, support, or feedback, please contact:
 
 **Submit Feedback or Support the Project(https://hejhdiss.github.io/pcl-support/)**
-
 **Email:** hejhdiss@gmail.com  
 **Author:** Muhammed Shafin P
 
