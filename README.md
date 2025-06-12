@@ -240,8 +240,7 @@ If you have expertise in compiler design, ctypes integration, C/Python interoper
 - Enhancing error handling and memory management  
 - Expanding documentation and test coverage
 
-Please reach out via email (**hejhdiss@gmail.com**), submit pull requests on the repository, or [use the support/contribution form](https://hejhdiss.github.io/pcl-support/).  
-Together, we can build a robust and versatile PCL toolchain.
+Please reach out via email (**hejhdiss@gmail.com**), submit pull requests on the repository, or [use the support/contribution form](https://hejhdiss.github.io/pcl-support/).  Together, we can build a robust and versatile PCL toolchain.
 
 
 ---
